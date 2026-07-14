@@ -32,6 +32,7 @@ const footerLinks: Record<string, { label: string; href: string }[]> = {
     { label: "Careers", href: "#" },
     { label: "Press", href: "#" },
     { label: "Partners", href: "#" },
+    { label: "Recruitment Portal Demo", href: "/demo/recruitment" },
     { label: "Contact", href: "/contact" },
   ],
 };
