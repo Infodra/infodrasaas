@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -37,7 +37,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
       <motion.aside
         initial={{ x: -20, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
-        className={`fixed z-40 h-[calc(100vh-1.5rem)] w-72 rounded-3xl border border-white/10 bg-slate-950/80 p-5 backdrop-blur-xl lg:static lg:h-auto lg:translate-x-0 ${
+        className={`fixed z-40 h-[calc(100vh-1.5rem)] w-72 rounded-3xl border border-slate-200/80 bg-white/85 p-5 backdrop-blur-xl lg:static lg:h-auto lg:translate-x-0 ${
           isOpen ? "translate-x-0" : "-translate-x-[120%]"
         } transition-transform duration-300`}
       >
@@ -45,7 +45,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
           <div className="h-10 w-10 rounded-2xl bg-gradient-to-br from-brand-500 to-indigo-600" />
           <div>
             <p className="text-xs uppercase tracking-[0.2em] text-slate-400">Infodra SaaS</p>
-            <p className="text-sm font-semibold text-white">Recruitment Portal</p>
+            <p className="text-sm font-semibold text-slate-900">Recruitment Portal</p>
           </div>
         </div>
 
@@ -60,8 +60,8 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                 onClick={onClose}
                 className={`flex items-center gap-3 rounded-2xl px-3 py-2.5 text-sm transition-all ${
                   active
-                    ? "bg-brand-500/20 text-white shadow-lg shadow-brand-500/10"
-                    : "text-slate-300 hover:bg-white/10 hover:text-white"
+                    ? "bg-brand-500/20 text-slate-900 shadow-lg shadow-brand-500/10"
+                    : "text-slate-600 hover:bg-slate-100 hover:text-slate-900"
                 }`}
               >
                 <Icon className="h-4 w-4" />
@@ -73,7 +73,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
 
         <button
           type="button"
-          className="mt-10 flex w-full items-center gap-3 rounded-2xl border border-rose-400/20 bg-rose-500/10 px-3 py-2.5 text-sm text-rose-200 transition hover:bg-rose-500/20"
+          className="mt-10 flex w-full items-center gap-3 rounded-2xl border border-rose-400/20 bg-rose-500/10 px-3 py-2.5 text-sm text-rose-700 transition hover:bg-rose-500/20"
         >
           <LogOut className="h-4 w-4" />
           Logout
@@ -91,3 +91,5 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
     </>
   );
 }
+
+

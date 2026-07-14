@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 
@@ -11,7 +11,7 @@ export default function SettingsPage() {
     <div className="space-y-6 pb-8">
       <div>
         <p className="text-xs uppercase tracking-[0.2em] text-slate-400">Settings</p>
-        <h2 className="text-2xl font-semibold text-white">Portal Preferences</h2>
+        <h2 className="text-2xl font-semibold text-slate-900">Portal Preferences</h2>
       </div>
 
       <div className="grid gap-4 lg:grid-cols-2">
@@ -31,10 +31,10 @@ export default function SettingsPage() {
           value: publicForm,
           set: setPublicForm,
         }].map((item) => (
-          <article key={item.label} className="rounded-3xl border border-white/10 bg-slate-900/60 p-5 shadow-xl shadow-black/20 backdrop-blur-xl">
+          <article key={item.label} className="rounded-3xl border border-slate-200/80 bg-white/85 p-5 shadow-xl shadow-black/20 backdrop-blur-xl">
             <div className="flex items-start justify-between gap-3">
               <div>
-                <h3 className="text-sm font-semibold text-white">{item.label}</h3>
+                <h3 className="text-sm font-semibold text-slate-900">{item.label}</h3>
                 <p className="mt-1 text-sm text-slate-400">{item.desc}</p>
               </div>
               <button
@@ -51,3 +51,5 @@ export default function SettingsPage() {
     </div>
   );
 }
+
+

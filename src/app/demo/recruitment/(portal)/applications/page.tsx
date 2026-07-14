@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useMemo, useState } from "react";
 import { Download, Search } from "lucide-react";
@@ -69,10 +69,10 @@ export default function ApplicationsPage() {
 
   return (
     <div className="space-y-5 pb-8">
-      <div className="flex flex-col gap-3 rounded-3xl border border-white/10 bg-slate-900/60 p-5 backdrop-blur-xl md:flex-row md:items-center md:justify-between">
-        <h2 className="text-xl font-semibold text-white">Applications</h2>
+      <div className="flex flex-col gap-3 rounded-3xl border border-slate-200/80 bg-white/85 p-5 backdrop-blur-xl md:flex-row md:items-center md:justify-between">
+        <h2 className="text-xl font-semibold text-slate-900">Applications</h2>
         <div className="flex flex-wrap items-center gap-2">
-          <div className="flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-3 py-2">
+          <div className="flex items-center gap-2 rounded-xl border border-slate-200/80 bg-slate-50 px-3 py-2">
             <Search className="h-4 w-4 text-slate-400" />
             <input
               value={query}
@@ -81,7 +81,7 @@ export default function ApplicationsPage() {
                 setPage(1);
               }}
               placeholder="Search"
-              className="w-44 bg-transparent text-sm text-white placeholder:text-slate-500 focus:outline-none"
+              className="w-44 bg-transparent text-sm text-slate-900 placeholder:text-slate-500 focus:outline-none"
             />
           </div>
           <select
@@ -90,7 +90,7 @@ export default function ApplicationsPage() {
               setStatusFilter(e.target.value as typeof statusFilter);
               setPage(1);
             }}
-            className="rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-white focus:outline-none"
+            className="rounded-xl border border-slate-200/80 bg-slate-50 px-3 py-2 text-sm text-slate-900 focus:outline-none"
           >
             <option className="bg-slate-900">All</option>
             <option className="bg-slate-900">New</option>
@@ -101,7 +101,7 @@ export default function ApplicationsPage() {
           <button
             type="button"
             onClick={exportTable}
-            className="inline-flex items-center gap-1 rounded-xl border border-brand-400/30 bg-brand-500/20 px-3 py-2 text-sm text-brand-100 transition hover:bg-brand-500/30"
+            className="inline-flex items-center gap-1 rounded-xl border border-brand-400/30 bg-brand-500/20 px-3 py-2 text-sm text-brand-700 transition hover:bg-brand-500/30"
           >
             <Download className="h-4 w-4" />
             Export
@@ -109,7 +109,7 @@ export default function ApplicationsPage() {
         </div>
       </div>
 
-      <div className="overflow-x-auto rounded-3xl border border-white/10 bg-slate-900/60 p-3 shadow-xl shadow-black/15 backdrop-blur-xl">
+      <div className="overflow-x-auto rounded-3xl border border-slate-200/80 bg-white/85 p-3 shadow-xl shadow-black/15 backdrop-blur-xl">
         <table className="min-w-full text-left text-sm">
           <thead className="text-xs uppercase tracking-wide text-slate-400">
             <tr>
@@ -125,9 +125,9 @@ export default function ApplicationsPage() {
           </thead>
           <tbody>
             {pagedRows.map((row) => (
-              <tr key={row.id} className="border-t border-white/5 text-slate-100">
+              <tr key={row.id} className="border-t border-white/5 text-slate-800">
                 <td className="px-3 py-3">
-                  <div className={`flex h-9 w-9 items-center justify-center rounded-xl text-xs font-semibold text-white ${row.candidate?.avatarClass}`}>
+                  <div className={`flex h-9 w-9 items-center justify-center rounded-xl text-xs font-semibold text-slate-900 ${row.candidate?.avatarClass}`}>
                     {row.candidate?.initials}
                   </div>
                 </td>
@@ -142,8 +142,8 @@ export default function ApplicationsPage() {
                 <td className="px-3 py-3"><StatusBadge status={row.status} /></td>
                 <td className="px-3 py-3">
                   <div className="flex gap-2">
-                    <button type="button" className="rounded-lg border border-white/10 bg-white/5 px-2.5 py-1 text-xs">View</button>
-                    <button type="button" className="rounded-lg border border-brand-400/30 bg-brand-500/15 px-2.5 py-1 text-xs text-brand-100">Shortlist</button>
+                    <button type="button" className="rounded-lg border border-slate-200/80 bg-slate-50 px-2.5 py-1 text-xs">View</button>
+                    <button type="button" className="rounded-lg border border-brand-400/30 bg-brand-500/15 px-2.5 py-1 text-xs text-brand-700">Shortlist</button>
                   </div>
                 </td>
               </tr>
@@ -152,14 +152,14 @@ export default function ApplicationsPage() {
         </table>
       </div>
 
-      <div className="flex items-center justify-between rounded-2xl border border-white/10 bg-slate-900/60 px-4 py-3 text-sm text-slate-300">
+      <div className="flex items-center justify-between rounded-2xl border border-slate-200/80 bg-white/85 px-4 py-3 text-sm text-slate-600">
         <p>Showing {(page - 1) * pageSize + 1} to {Math.min(page * pageSize, rows.length)} of {rows.length}</p>
         <div className="flex items-center gap-2">
           <button
             type="button"
             disabled={page === 1}
             onClick={() => setPage((current) => Math.max(1, current - 1))}
-            className="rounded-lg border border-white/10 bg-white/5 px-3 py-1.5 disabled:opacity-40"
+            className="rounded-lg border border-slate-200/80 bg-slate-50 px-3 py-1.5 disabled:opacity-40"
           >
             Prev
           </button>
@@ -168,7 +168,7 @@ export default function ApplicationsPage() {
             type="button"
             disabled={page >= totalPages}
             onClick={() => setPage((current) => Math.min(totalPages, current + 1))}
-            className="rounded-lg border border-white/10 bg-white/5 px-3 py-1.5 disabled:opacity-40"
+            className="rounded-lg border border-slate-200/80 bg-slate-50 px-3 py-1.5 disabled:opacity-40"
           >
             Next
           </button>
@@ -177,3 +177,5 @@ export default function ApplicationsPage() {
     </div>
   );
 }
+
+

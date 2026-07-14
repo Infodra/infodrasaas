@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip, LineChart, Line, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar, PieChart, Pie, Cell } from "recharts";
 
@@ -46,8 +46,8 @@ const colors = ["#38bdf8", "#3b82f6", "#6366f1", "#22c55e", "#f59e0b"];
 
 function ReportCard({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <article className="rounded-3xl border border-white/10 bg-slate-900/60 p-5 shadow-xl shadow-black/20 backdrop-blur-xl">
-      <h3 className="mb-4 text-sm font-medium text-slate-300">{title}</h3>
+    <article className="rounded-3xl border border-slate-200/80 bg-white/85 p-5 shadow-xl shadow-black/20 backdrop-blur-xl">
+      <h3 className="mb-4 text-sm font-medium text-slate-600">{title}</h3>
       <div className="h-72">{children}</div>
     </article>
   );
@@ -58,7 +58,7 @@ export default function ReportsPage() {
     <div className="space-y-6 pb-8">
       <div>
         <p className="text-xs uppercase tracking-[0.2em] text-slate-400">Reports</p>
-        <h2 className="text-2xl font-semibold text-white">Hiring Intelligence</h2>
+        <h2 className="text-2xl font-semibold text-slate-900">Hiring Intelligence</h2>
       </div>
 
       <div className="grid gap-4 xl:grid-cols-2">
@@ -121,3 +121,5 @@ export default function ReportsPage() {
     </div>
   );
 }
+
+

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { candidates as baseCandidates } from "../../data/candidates";
@@ -24,7 +24,7 @@ export default function CandidatesPage() {
     <div className="space-y-6 pb-8">
       <div>
         <p className="text-xs uppercase tracking-[0.2em] text-slate-400">Candidates</p>
-        <h2 className="text-2xl font-semibold text-white">Talent Pipeline</h2>
+        <h2 className="text-2xl font-semibold text-slate-900">Talent Pipeline</h2>
       </div>
 
       <div className="grid gap-4 xl:grid-cols-2 2xl:grid-cols-3">
@@ -48,3 +48,5 @@ export default function CandidatesPage() {
     </div>
   );
 }
+
+

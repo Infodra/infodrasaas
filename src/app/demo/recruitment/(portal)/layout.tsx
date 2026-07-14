@@ -1,4 +1,4 @@
-import { RecruitmentShell } from "../components/RecruitmentShell";
+﻿import { RecruitmentShell } from "../components/RecruitmentShell";
 
 export default function RecruitmentPortalLayout({
   children,
@@ -7,3 +7,5 @@ export default function RecruitmentPortalLayout({
 }) {
   return <RecruitmentShell>{children}</RecruitmentShell>;
 }
+
+

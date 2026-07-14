@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
@@ -33,7 +33,7 @@ export default function RecruitmentDashboardPage() {
       <RecentJobsTable />
 
       <section>
-        <h2 className="mb-4 text-lg font-semibold text-white">Recent Applicants</h2>
+        <h2 className="mb-4 text-lg font-semibold text-slate-900">Recent Applicants</h2>
         <div className="grid gap-4 xl:grid-cols-2 2xl:grid-cols-3">
           {featuredCandidates.map((candidate) => (
             <ApplicantCard
@@ -50,10 +50,10 @@ export default function RecruitmentDashboardPage() {
       <motion.section
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
-        className="rounded-3xl border border-white/10 bg-slate-900/60 p-6 shadow-xl shadow-black/20 backdrop-blur-xl"
+        className="rounded-3xl border border-slate-200/80 bg-white/85 p-6 shadow-xl shadow-black/20 backdrop-blur-xl"
       >
-        <h2 className="mb-4 text-lg font-semibold text-white">Demo Flow</h2>
-        <div className="grid gap-3 text-sm text-slate-200 sm:grid-cols-2 lg:grid-cols-3">
+        <h2 className="mb-4 text-lg font-semibold text-slate-900">Demo Flow</h2>
+        <div className="grid gap-3 text-sm text-slate-700 sm:grid-cols-2 lg:grid-cols-3">
           {[
             "Step 1: HR creates Job",
             "Step 2: System Generates Public Link",
@@ -78,3 +78,5 @@ export default function RecruitmentDashboardPage() {
     </div>
   );
 }
+
+

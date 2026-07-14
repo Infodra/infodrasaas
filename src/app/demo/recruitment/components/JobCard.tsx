@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import type { Candidate } from "../types";
@@ -16,7 +16,7 @@ export function ApplicantCard({ candidate, onView, onShortlist, onReject }: JobC
     <motion.article
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
-      className="rounded-3xl border border-white/10 bg-slate-900/60 p-5 shadow-lg shadow-black/20 backdrop-blur-xl"
+      className="rounded-3xl border border-slate-200/80 bg-white/85 p-5 shadow-lg shadow-black/20 backdrop-blur-xl"
     >
       <div className="mb-4 flex items-start justify-between gap-2">
         <div className="flex items-center gap-3">
@@ -24,14 +24,14 @@ export function ApplicantCard({ candidate, onView, onShortlist, onReject }: JobC
             {candidate.initials}
           </div>
           <div>
-            <h4 className="text-sm font-semibold text-white">{candidate.name}</h4>
-            <p className="text-xs text-slate-400">{candidate.role} • {candidate.experience}</p>
+            <h4 className="text-sm font-semibold text-slate-900">{candidate.name}</h4>
+            <p className="text-xs text-slate-400">{candidate.role} - {candidate.experience}</p>
           </div>
         </div>
         <StatusBadge status={candidate.status} />
       </div>
 
-      <div className="grid gap-2 text-xs text-slate-300 sm:grid-cols-2">
+      <div className="grid gap-2 text-xs text-slate-600 sm:grid-cols-2">
         <p>Skills: {candidate.skills.join(", ")}</p>
         <p>Location: {candidate.location}</p>
         <p>Current Salary: {candidate.currentSalary}</p>
@@ -43,21 +43,21 @@ export function ApplicantCard({ candidate, onView, onShortlist, onReject }: JobC
         <button
           type="button"
           onClick={() => onView(candidate)}
-          className="rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-xs text-slate-100 transition hover:bg-white/10"
+          className="rounded-xl border border-slate-200/80 bg-slate-50 px-3 py-2 text-xs text-slate-800 transition hover:bg-slate-100"
         >
           View
         </button>
         <button
           type="button"
           onClick={() => onShortlist(candidate.id)}
-          className="rounded-xl border border-emerald-400/30 bg-emerald-500/15 px-3 py-2 text-xs text-emerald-100 transition hover:bg-emerald-500/25"
+          className="rounded-xl border border-emerald-400/30 bg-emerald-500/15 px-3 py-2 text-xs text-emerald-700 transition hover:bg-emerald-500/25"
         >
           Shortlist
         </button>
         <button
           type="button"
           onClick={() => onReject(candidate.id)}
-          className="rounded-xl border border-rose-400/30 bg-rose-500/15 px-3 py-2 text-xs text-rose-100 transition hover:bg-rose-500/25"
+          className="rounded-xl border border-rose-400/30 bg-rose-500/15 px-3 py-2 text-xs text-rose-700 transition hover:bg-rose-500/25"
         >
           Reject
         </button>
@@ -65,3 +65,5 @@ export function ApplicantCard({ candidate, onView, onShortlist, onReject }: JobC
     </motion.article>
   );
 }
+
+

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import {
@@ -68,9 +68,9 @@ function ChartCard({ title, children }: { title: string; children: React.ReactNo
       initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.45 }}
-      className="rounded-3xl border border-white/10 bg-slate-900/60 p-5 shadow-xl shadow-black/20 backdrop-blur-xl"
+      className="rounded-3xl border border-slate-200/80 bg-white/85 p-5 shadow-xl shadow-black/20 backdrop-blur-xl"
     >
-      <h3 className="mb-4 text-sm font-medium text-slate-300">{title}</h3>
+      <h3 className="mb-4 text-sm font-medium text-slate-600">{title}</h3>
       <div className="h-72">{children}</div>
     </motion.article>
   );
@@ -136,18 +136,18 @@ export function RecruitmentCharts() {
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.45 }}
-        className="rounded-3xl border border-white/10 bg-slate-900/60 p-5 shadow-xl shadow-black/20 backdrop-blur-xl xl:col-span-2"
+        className="rounded-3xl border border-slate-200/80 bg-white/85 p-5 shadow-xl shadow-black/20 backdrop-blur-xl xl:col-span-2"
       >
-        <h3 className="mb-4 text-sm font-medium text-slate-300">Latest Activity Timeline</h3>
+        <h3 className="mb-4 text-sm font-medium text-slate-600">Latest Activity Timeline</h3>
         <div className="space-y-4">
           {activities.map((activity, idx) => (
             <div key={activity.title} className="flex gap-3">
               <div className="flex flex-col items-center">
                 <span className="mt-1 h-2.5 w-2.5 rounded-full bg-brand-400" />
-                {idx < activities.length - 1 ? <span className="mt-1 h-9 w-px bg-white/10" /> : null}
+                {idx < activities.length - 1 ? <span className="mt-1 h-9 w-px bg-slate-200" /> : null}
               </div>
               <div>
-                <p className="text-sm text-slate-100">{activity.title}</p>
+                <p className="text-sm text-slate-800">{activity.title}</p>
                 <p className="mt-1 text-xs text-slate-400">{activity.time}</p>
               </div>
             </div>
@@ -157,3 +157,5 @@ export function RecruitmentCharts() {
     </section>
   );
 }
+
+

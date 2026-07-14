@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { BriefcaseBusiness, MapPin, Users } from "lucide-react";
@@ -10,7 +10,7 @@ export default function JobsPage() {
     <div className="space-y-6 pb-8">
       <div>
         <p className="text-xs uppercase tracking-[0.2em] text-slate-400">Jobs</p>
-        <h2 className="text-2xl font-semibold text-white">Open Positions</h2>
+        <h2 className="text-2xl font-semibold text-slate-900">Open Positions</h2>
       </div>
 
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
@@ -20,13 +20,13 @@ export default function JobsPage() {
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.04, duration: 0.35 }}
-            className="rounded-3xl border border-white/10 bg-slate-900/60 p-5 shadow-xl shadow-black/20 backdrop-blur-xl"
+            className="rounded-3xl border border-slate-200/80 bg-white/85 p-5 shadow-xl shadow-black/20 backdrop-blur-xl"
           >
             <div className="mb-3 flex items-center justify-between">
-              <p className="text-sm font-semibold text-white">{job.title}</p>
+              <p className="text-sm font-semibold text-slate-900">{job.title}</p>
               <StatusBadge status={job.status} />
             </div>
-            <div className="space-y-2 text-sm text-slate-300">
+            <div className="space-y-2 text-sm text-slate-600">
               <p className="flex items-center gap-2"><BriefcaseBusiness className="h-4 w-4 text-brand-300" /> {job.department}</p>
               <p className="flex items-center gap-2"><MapPin className="h-4 w-4 text-brand-300" /> {job.location}</p>
               <p className="flex items-center gap-2"><Users className="h-4 w-4 text-brand-300" /> {job.applications} applications</p>
@@ -44,3 +44,5 @@ export default function JobsPage() {
     </div>
   );
 }
+
+
