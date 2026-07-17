@@ -1,0 +1,46 @@
+[
+  {
+    "id": "u-001",
+    "name": "Vikram Rao",
+    "email": "vikram@commercehub.demo",
+    "phone": "+91 90000 10001",
+    "avatar": "/logo.png",
+    "totalSpent": 58990,
+    "orders": 12,
+    "address": "Bengaluru, India",
+    "wishlist": ["p-001", "p-004"],
+    "addresses": [
+      "Bengaluru HQ, Residency Road, Bengaluru",
+      "Secondary Office, Whitefield, Bengaluru"
+    ]
+  },
+  {
+    "id": "u-002",
+    "name": "Priya Iyer",
+    "email": "priya@commercehub.demo",
+    "phone": "+91 90000 10002",
+    "avatar": "/logo.png",
+    "totalSpent": 42990,
+    "orders": 8,
+    "address": "Chennai, India",
+    "wishlist": ["p-003"],
+    "addresses": [
+      "Adyar Main Road, Chennai"
+    ]
+  },
+  {
+    "id": "u-003",
+    "name": "Arjun Menon",
+    "email": "arjun@commercehub.demo",
+    "phone": "+91 90000 10003",
+    "avatar": "/logo.png",
+    "totalSpent": 73490,
+    "orders": 16,
+    "address": "Pune, India",
+    "wishlist": ["p-008", "p-006"],
+    "addresses": [
+      "Koregaon Park, Pune",
+      "Baner Business Centre, Pune"
+    ]
+  }
+]

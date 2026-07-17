@@ -1,0 +1,16 @@
+[
+  {
+    "id": "flash-01",
+    "title": "Flash Sale 40% OFF",
+    "description": "Limited-time enterprise curated selection.",
+    "endsAt": "2026-12-30T23:59:59.000Z",
+    "code": "FLASH40"
+  },
+  {
+    "id": "new-user",
+    "title": "New User Welcome",
+    "description": "Get INR 500 off on your first order.",
+    "endsAt": "2026-11-15T23:59:59.000Z",
+    "code": "WELCOME500"
+  }
+]

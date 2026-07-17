@@ -1,0 +1,8 @@
+[
+  { "id": "nova-tech", "name": "NovaTech", "featured": true },
+  { "id": "veloura", "name": "Veloura", "featured": true },
+  { "id": "aether-home", "name": "Aether Home", "featured": true },
+  { "id": "stride-max", "name": "StrideMax", "featured": true },
+  { "id": "prime-essentials", "name": "Prime Essentials", "featured": false },
+  { "id": "craftline", "name": "Craftline", "featured": false }
+]

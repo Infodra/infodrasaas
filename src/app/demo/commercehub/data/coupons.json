@@ -1,0 +1,29 @@
+[
+  {
+    "id": "cp-001",
+    "code": "FLASH40",
+    "discount": 10,
+    "type": "percentage",
+    "usage": 124,
+    "expiry": "2026-12-30",
+    "status": "Active"
+  },
+  {
+    "id": "cp-002",
+    "code": "WELCOME500",
+    "discount": 500,
+    "type": "fixed",
+    "usage": 58,
+    "expiry": "2026-11-15",
+    "status": "Active"
+  },
+  {
+    "id": "cp-003",
+    "code": "INDUSTRIAL15",
+    "discount": 15,
+    "type": "percentage",
+    "usage": 19,
+    "expiry": "2026-09-01",
+    "status": "Scheduled"
+  }
+]

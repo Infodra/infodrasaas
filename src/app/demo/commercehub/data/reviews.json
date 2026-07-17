@@ -1,0 +1,34 @@
+[
+  {
+    "id": "rev-1",
+    "productId": "p-001",
+    "name": "Aarav Mehta",
+    "rating": 5,
+    "comment": "Premium packaging and excellent product quality.",
+    "date": "2026-07-01"
+  },
+  {
+    "id": "rev-2",
+    "productId": "p-002",
+    "name": "Nisha Patel",
+    "rating": 4,
+    "comment": "Great value and very modern finish.",
+    "date": "2026-06-28"
+  },
+  {
+    "id": "rev-3",
+    "productId": "p-004",
+    "name": "Rahul S",
+    "rating": 5,
+    "comment": "Fast delivery and responsive support.",
+    "date": "2026-06-19"
+  },
+  {
+    "id": "rev-4",
+    "productId": "p-006",
+    "name": "Meera K",
+    "rating": 4,
+    "comment": "Looks exactly as shown. Impressive build quality.",
+    "date": "2026-06-14"
+  }
+]

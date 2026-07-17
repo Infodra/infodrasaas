@@ -1,0 +1,12 @@
+[
+  { "id": "electronics", "name": "Electronics", "icon": "CpuChipIcon" },
+  { "id": "fashion", "name": "Fashion", "icon": "SparklesIcon" },
+  { "id": "home-kitchen", "name": "Home & Kitchen", "icon": "HomeModernIcon" },
+  { "id": "furniture", "name": "Furniture", "icon": "BuildingStorefrontIcon" },
+  { "id": "beauty", "name": "Beauty", "icon": "HeartIcon" },
+  { "id": "sports", "name": "Sports", "icon": "TrophyIcon" },
+  { "id": "books", "name": "Books", "icon": "BookOpenIcon" },
+  { "id": "toys", "name": "Toys", "icon": "PuzzlePieceIcon" },
+  { "id": "groceries", "name": "Groceries", "icon": "ShoppingBagIcon" },
+  { "id": "industrial", "name": "Industrial Supplies", "icon": "WrenchScrewdriverIcon" }
+]

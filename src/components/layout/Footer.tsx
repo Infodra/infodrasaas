@@ -20,20 +20,16 @@ const footerLinks: Record<string, { label: string; href: string }[]> = {
     { label: "Enterprise", href: "#" },
     { label: "Startups", href: "#" },
   ],
-  Resources: [
-    { label: "Documentation", href: "#" },
-    { label: "API Reference", href: "#" },
-    { label: "Blog", href: "#" },
-    { label: "Changelog", href: "#" },
-    { label: "Status", href: "#" },
-  ],
   Company: [
     { label: "About", href: "#" },
     { label: "Careers", href: "#" },
     { label: "Press", href: "#" },
     { label: "Partners", href: "#" },
-    { label: "Recruitment Portal Demo", href: "/demo/recruitment" },
     { label: "Contact", href: "/contact" },
+  ],
+  Demo: [
+    { label: "Recruitment Portal", href: "/demo/recruitment" },
+    { label: "CommerceHub", href: "/demo/commercehub" },
   ],
 };
 
