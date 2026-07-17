@@ -15,13 +15,13 @@ export function RecentJobsTable() {
     >
       <div className="mb-4 flex items-center justify-between">
         <h3 className="text-lg font-semibold text-slate-900">Recent Jobs</h3>
-        <Link href="/demo/recruitment/jobs" className="text-sm text-brand-300 hover:text-brand-200">
+        <Link href="/demo/recruitment/jobs" className="text-sm text-brand-700 hover:text-brand-800">
           View all
         </Link>
       </div>
       <div className="overflow-x-auto">
         <table className="min-w-full text-left text-sm">
-          <thead className="text-xs uppercase tracking-wide text-slate-400">
+          <thead className="text-xs uppercase tracking-wide text-slate-500">
             <tr>
               <th className="px-3 py-3">Job Title</th>
               <th className="px-3 py-3">Department</th>

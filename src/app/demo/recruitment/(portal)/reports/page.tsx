@@ -57,7 +57,7 @@ export default function ReportsPage() {
   return (
     <div className="space-y-6 pb-8">
       <div>
-        <p className="text-xs uppercase tracking-[0.2em] text-slate-400">Reports</p>
+        <p className="text-xs uppercase tracking-[0.2em] text-slate-500">Reports</p>
         <h2 className="text-2xl font-semibold text-slate-900">Hiring Intelligence</h2>
       </div>
 
@@ -76,8 +76,8 @@ export default function ReportsPage() {
         <ReportCard title="Monthly Hiring">
           <ResponsiveContainer width="100%" height="100%">
             <LineChart data={funnelData}>
-              <XAxis dataKey="month" stroke="#94a3b8" />
-              <YAxis stroke="#94a3b8" />
+              <XAxis dataKey="month" stroke="#64748b" />
+              <YAxis stroke="#64748b" />
               <Tooltip />
               <Line type="monotone" dataKey="apps" stroke="#38bdf8" strokeWidth={2.5} />
               <Line type="monotone" dataKey="hires" stroke="#22c55e" strokeWidth={2.5} />
@@ -89,7 +89,7 @@ export default function ReportsPage() {
           <ResponsiveContainer width="100%" height="100%">
             <RadarChart data={topSkills}>
               <PolarGrid stroke="#334155" />
-              <PolarAngleAxis dataKey="subject" stroke="#cbd5e1" />
+              <PolarAngleAxis dataKey="subject" stroke="#475569" />
               <PolarRadiusAxis stroke="#64748b" />
               <Radar name="Demand" dataKey="A" stroke="#60a5fa" fill="#3b82f6" fillOpacity={0.45} />
             </RadarChart>
@@ -99,8 +99,8 @@ export default function ReportsPage() {
         <ReportCard title="Recruiter Performance">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={recruiterPerformance}>
-              <XAxis dataKey="name" stroke="#94a3b8" />
-              <YAxis stroke="#94a3b8" />
+              <XAxis dataKey="name" stroke="#64748b" />
+              <YAxis stroke="#64748b" />
               <Tooltip />
               <Bar dataKey="value" fill="#38bdf8" radius={[8, 8, 0, 0]} />
             </BarChart>
@@ -110,8 +110,8 @@ export default function ReportsPage() {
         <ReportCard title="Hiring Funnel">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={hiringFunnel} layout="vertical" margin={{ left: 12 }}>
-              <XAxis type="number" stroke="#94a3b8" />
-              <YAxis type="category" dataKey="stage" stroke="#94a3b8" width={92} />
+              <XAxis type="number" stroke="#64748b" />
+              <YAxis type="category" dataKey="stage" stroke="#64748b" width={92} />
               <Tooltip />
               <Bar dataKey="value" fill="#60a5fa" radius={[0, 8, 8, 0]} />
             </BarChart>

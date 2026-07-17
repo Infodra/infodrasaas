@@ -35,16 +35,16 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
   return (
     <>
       <motion.aside
-        initial={{ x: -20, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        className={`fixed z-40 h-[calc(100vh-1.5rem)] w-72 rounded-3xl border border-slate-200/80 bg-white/85 p-5 backdrop-blur-xl lg:static lg:h-auto lg:translate-x-0 ${
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className={`fixed inset-y-3 left-3 z-40 h-[calc(100vh-1.5rem)] w-72 overflow-y-auto rounded-3xl border border-slate-200/80 bg-white/85 p-5 backdrop-blur-xl lg:static lg:inset-auto lg:h-auto lg:overflow-visible lg:translate-x-0 ${
           isOpen ? "translate-x-0" : "-translate-x-[120%]"
         } transition-transform duration-300`}
       >
         <div className="mb-8 flex items-center gap-3">
           <div className="h-10 w-10 rounded-2xl bg-gradient-to-br from-brand-500 to-indigo-600" />
           <div>
-            <p className="text-xs uppercase tracking-[0.2em] text-slate-400">Infodra SaaS</p>
+            <p className="text-xs uppercase tracking-[0.2em] text-slate-500">Infodra SaaS</p>
             <p className="text-sm font-semibold text-slate-900">Recruitment Portal</p>
           </div>
         </div>

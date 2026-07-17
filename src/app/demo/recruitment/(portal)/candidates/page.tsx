@@ -23,7 +23,7 @@ export default function CandidatesPage() {
   return (
     <div className="space-y-6 pb-8">
       <div>
-        <p className="text-xs uppercase tracking-[0.2em] text-slate-400">Candidates</p>
+        <p className="text-xs uppercase tracking-[0.2em] text-slate-500">Candidates</p>
         <h2 className="text-2xl font-semibold text-slate-900">Talent Pipeline</h2>
       </div>
 

@@ -21,13 +21,13 @@ export function RecruitmentNavbar({ onMenuToggle }: NavbarProps) {
             <Menu className="h-4 w-4" />
           </button>
           <div className="hidden sm:block">
-            <p className="text-xs uppercase tracking-[0.2em] text-slate-400">Company Logo</p>
+            <p className="text-xs uppercase tracking-[0.2em] text-slate-500">Company Logo</p>
             <h1 className="text-lg font-semibold text-slate-900">Recruitment Portal</h1>
           </div>
         </div>
 
         <div className="hidden max-w-md flex-1 items-center gap-2 rounded-2xl border border-slate-200/80 bg-slate-50 px-3 py-2 md:flex">
-          <Search className="h-4 w-4 text-slate-400" />
+          <Search className="h-4 w-4 text-slate-500" />
           <input
             type="text"
             placeholder="Search jobs, candidates, skills"

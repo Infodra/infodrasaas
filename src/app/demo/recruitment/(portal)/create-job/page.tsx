@@ -10,7 +10,7 @@ export default function CreateJobPage() {
   return (
     <div className="grid gap-6 pb-8 xl:grid-cols-[1.6fr_1fr]">
       <section className="rounded-3xl border border-slate-200/80 bg-white/85 p-6 shadow-xl shadow-black/20 backdrop-blur-xl">
-        <p className="text-xs uppercase tracking-[0.2em] text-slate-400">Create Job</p>
+        <p className="text-xs uppercase tracking-[0.2em] text-slate-500">Create Job</p>
         <h2 className="mt-1 text-2xl font-semibold text-slate-900">Design a high-converting job post</h2>
 
         <form
@@ -45,7 +45,7 @@ export default function CreateJobPage() {
 
       <aside className="rounded-3xl border border-slate-200/80 bg-white/85 p-6 shadow-xl shadow-black/20 backdrop-blur-xl">
         <h3 className="text-base font-semibold text-slate-900">Generated Public Link</h3>
-        <div className="mt-3 rounded-2xl border border-slate-200/80 bg-slate-50 p-3 text-sm text-brand-200">
+        <div className="mt-3 rounded-2xl border border-slate-200/80 bg-slate-50 p-3 text-sm text-brand-700">
           https://infodrasaas.com/demo/recruitment
         </div>
 

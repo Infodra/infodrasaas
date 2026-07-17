@@ -88,8 +88,8 @@ export function RecruitmentCharts() {
                 <stop offset="100%" stopColor="#3b82f6" stopOpacity={0.05} />
               </linearGradient>
             </defs>
-            <XAxis dataKey="day" stroke="#94a3b8" />
-            <YAxis stroke="#94a3b8" />
+            <XAxis dataKey="day" stroke="#64748b" />
+            <YAxis stroke="#64748b" />
             <Tooltip />
             <Area type="monotone" dataKey="value" stroke="#60a5fa" fill="url(#colorValue)" />
           </AreaChart>
@@ -101,7 +101,7 @@ export function RecruitmentCharts() {
           <FunnelChart>
             <Tooltip />
             <Funnel dataKey="value" data={hiringFunnel} isAnimationActive>
-              <LabelList position="right" fill="#cbd5e1" stroke="none" dataKey="name" />
+              <LabelList position="right" fill="#334155" stroke="none" dataKey="name" />
             </Funnel>
           </FunnelChart>
         </ResponsiveContainer>
@@ -110,8 +110,8 @@ export function RecruitmentCharts() {
       <ChartCard title="Job Wise Applications">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart data={jobWiseApplications}>
-            <XAxis dataKey="name" stroke="#94a3b8" />
-            <YAxis stroke="#94a3b8" />
+            <XAxis dataKey="name" stroke="#64748b" />
+            <YAxis stroke="#64748b" />
             <Tooltip />
             <Bar dataKey="value" radius={[8, 8, 0, 0]} fill="#38bdf8" />
           </BarChart>
@@ -148,7 +148,7 @@ export function RecruitmentCharts() {
               </div>
               <div>
                 <p className="text-sm text-slate-800">{activity.title}</p>
-                <p className="mt-1 text-xs text-slate-400">{activity.time}</p>
+                <p className="mt-1 text-xs text-slate-500">{activity.time}</p>
               </div>
             </div>
           ))}

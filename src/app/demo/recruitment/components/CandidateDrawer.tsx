@@ -49,7 +49,7 @@ export function CandidateDrawer({ candidate, onClose, onShortlist, onReject }: C
               </div>
               <div>
                 <p className="text-base font-semibold text-slate-900">{candidate.name}</p>
-                <p className="text-sm text-slate-400">{candidate.role} - {candidate.experience}</p>
+                <p className="text-sm text-slate-500">{candidate.role} - {candidate.experience}</p>
               </div>
             </div>
 
@@ -63,9 +63,9 @@ export function CandidateDrawer({ candidate, onClose, onShortlist, onReject }: C
                       {index < candidate.timeline.length - 1 ? <span className="mt-1 h-8 w-px bg-slate-200" /> : null}
                     </div>
                     <div>
-                      <p className="text-xs text-slate-400">{item.year}</p>
+                      <p className="text-xs text-slate-500">{item.year}</p>
                       <p className="text-sm text-slate-800">{item.title}</p>
-                      <p className="text-xs text-slate-400">{item.company}</p>
+                      <p className="text-xs text-slate-500">{item.company}</p>
                     </div>
                   </div>
                 ))}
@@ -101,17 +101,17 @@ export function CandidateDrawer({ candidate, onClose, onShortlist, onReject }: C
               </ul>
             </section>
 
-            <section className="mb-5 rounded-2xl border border-dashed border-slate-300 bg-slate-50/80 p-4 text-sm text-slate-400">
+            <section className="mb-5 rounded-2xl border border-dashed border-slate-300 bg-slate-50/80 p-4 text-sm text-slate-500">
               Resume Preview Placeholder
             </section>
 
             <section className="mb-6 grid gap-3 sm:grid-cols-2">
               <div className="rounded-2xl border border-slate-200/80 bg-slate-50 p-3">
-                <p className="text-xs text-slate-400">Expected Salary</p>
+                <p className="text-xs text-slate-500">Expected Salary</p>
                 <p className="text-sm text-slate-900">{candidate.expectedSalary}</p>
               </div>
               <div className="rounded-2xl border border-slate-200/80 bg-slate-50 p-3">
-                <p className="text-xs text-slate-400">Notice Period</p>
+                <p className="text-xs text-slate-500">Notice Period</p>
                 <p className="text-sm text-slate-900">{candidate.noticePeriod}</p>
               </div>
             </section>

@@ -9,7 +9,7 @@ export default function JobsPage() {
   return (
     <div className="space-y-6 pb-8">
       <div>
-        <p className="text-xs uppercase tracking-[0.2em] text-slate-400">Jobs</p>
+        <p className="text-xs uppercase tracking-[0.2em] text-slate-500">Jobs</p>
         <h2 className="text-2xl font-semibold text-slate-900">Open Positions</h2>
       </div>
 
@@ -33,7 +33,7 @@ export default function JobsPage() {
             </div>
             <div className="mt-4 flex flex-wrap gap-2">
               {job.skills.map((skill) => (
-                <span key={skill} className="rounded-full border border-brand-400/30 bg-brand-500/10 px-2.5 py-1 text-xs text-brand-200">
+                <span key={skill} className="rounded-full border border-brand-400/30 bg-brand-500/10 px-2.5 py-1 text-xs text-brand-700">
                   {skill}
                 </span>
               ))}

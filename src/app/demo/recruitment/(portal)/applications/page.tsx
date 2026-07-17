@@ -73,7 +73,7 @@ export default function ApplicationsPage() {
         <h2 className="text-xl font-semibold text-slate-900">Applications</h2>
         <div className="flex flex-wrap items-center gap-2">
           <div className="flex items-center gap-2 rounded-xl border border-slate-200/80 bg-slate-50 px-3 py-2">
-            <Search className="h-4 w-4 text-slate-400" />
+            <Search className="h-4 w-4 text-slate-500" />
             <input
               value={query}
               onChange={(e) => {
@@ -111,7 +111,7 @@ export default function ApplicationsPage() {
 
       <div className="overflow-x-auto rounded-3xl border border-slate-200/80 bg-white/85 p-3 shadow-xl shadow-black/15 backdrop-blur-xl">
         <table className="min-w-full text-left text-sm">
-          <thead className="text-xs uppercase tracking-wide text-slate-400">
+          <thead className="text-xs uppercase tracking-wide text-slate-500">
             <tr>
               <th className="px-3 py-3">Photo</th>
               <th className="px-3 py-3">Candidate</th>
@@ -133,7 +133,7 @@ export default function ApplicationsPage() {
                 </td>
                 <td className="px-3 py-3">
                   <p>{row.candidate?.name}</p>
-                  <p className="text-xs text-slate-400">{row.job?.title}</p>
+                  <p className="text-xs text-slate-500">{row.job?.title}</p>
                 </td>
                 <td className="px-3 py-3">{row.candidate?.experience}</td>
                 <td className="px-3 py-3">{row.candidate?.skills.slice(0, 2).join(", ")}</td>

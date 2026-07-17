@@ -25,7 +25,7 @@ export function ApplicantCard({ candidate, onView, onShortlist, onReject }: JobC
           </div>
           <div>
             <h4 className="text-sm font-semibold text-slate-900">{candidate.name}</h4>
-            <p className="text-xs text-slate-400">{candidate.role} - {candidate.experience}</p>
+            <p className="text-xs text-slate-500">{candidate.role} - {candidate.experience}</p>
           </div>
         </div>
         <StatusBadge status={candidate.status} />

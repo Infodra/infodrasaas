@@ -10,7 +10,7 @@ export default function SettingsPage() {
   return (
     <div className="space-y-6 pb-8">
       <div>
-        <p className="text-xs uppercase tracking-[0.2em] text-slate-400">Settings</p>
+        <p className="text-xs uppercase tracking-[0.2em] text-slate-500">Settings</p>
         <h2 className="text-2xl font-semibold text-slate-900">Portal Preferences</h2>
       </div>
 
@@ -35,7 +35,7 @@ export default function SettingsPage() {
             <div className="flex items-start justify-between gap-3">
               <div>
                 <h3 className="text-sm font-semibold text-slate-900">{item.label}</h3>
-                <p className="mt-1 text-sm text-slate-400">{item.desc}</p>
+                <p className="mt-1 text-sm text-slate-500">{item.desc}</p>
               </div>
               <button
                 type="button"
