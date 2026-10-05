@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { PRODUCTS, WHATSAPP_HREF } from "@/lib/constants";
 import {
   MapPin, Phone, Mail, Clock, MessageCircle,
   Send, CheckCircle2, ChevronDown, Building2,
@@ -57,7 +58,7 @@ const INFO_CARDS = [
     gradient: "from-green-500 to-emerald-600",
     action: {
       label: "Open WhatsApp",
-      href: "https://wa.me/919363753540?text=Hi%20Infodra%20Team%2C%20I%20need%20a%20demo%20for%20Infodra%20SaaS.%20Please%20share%20details.",
+      href: WHATSAPP_HREF,
     },
   },
   {
@@ -80,7 +81,7 @@ const CONTACT_FAQS = [
   {
     question: "Which products are best for my business?",
     answer:
-      "It depends on your business size and challenges. WorkHub and StaffTrack are ideal for companies managing employees or field teams. BizLead suits sales-focused teams. Our AI Assistant and CRM are great for digital transformation. Book a demo and our team will recommend the right fit.",
+      "WorkHub and StaffTrack support employee and field-team management. BizLead supports sales prospecting. List360 Business brings real estate listings, lead management and WhatsApp campaigns together. AI Assistant, Infodra CRM and InfodraBook are coming soon; InfodraBook is planned for cloud accounting, invoicing and business finance. Use the form to discuss the right product for your team.",
   },
   {
     question: "Do you offer trial periods or demos?",
@@ -281,16 +282,12 @@ function ContactForm() {
               onChange={handleChange}
               className={`${inputBase} appearance-none pr-10 cursor-pointer`}
             >
-              <option value="">Select a service</option>
-              <option value="Engineering">Engineering</option>
-              <option value="Technology">Technology</option>
-              <option value="Staffing">Staffing</option>
-              <option value="WorkHub">WorkHub – Workforce Management</option>
-              <option value="StaffTrack">StaffTrack – GPS Attendance</option>
-              <option value="BizLead">BizLead – Lead Generation</option>
-              <option value="AI Assistant">AI Assistant</option>
-              <option value="CRM">CRM</option>
-              <option value="Other">Other / General Enquiry</option>
+              <option value="">Select a SaaS product</option>
+              {PRODUCTS.map((product) => (
+                <option key={product.id} value={product.name}>
+                  {product.name} - {product.tagline}{product.status === "coming-soon" ? " (Coming Soon)" : ""}
+                </option>
+              ))}
             </select>
             <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" />
           </div>
@@ -471,7 +468,7 @@ export function ContactContent() {
       </section>
 
       {/* Form + Quick Contact — side by side */}
-      <section className="py-12 pb-20">
+      <section id="contact-form" className="py-12 pb-20 scroll-mt-24" aria-labelledby="contact-form-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-8 items-start">
             {/* Contact Form */}
@@ -483,7 +480,7 @@ export function ContactContent() {
               className="rounded-2xl border border-slate-200 bg-white shadow-sm overflow-hidden"
             >
               <div className="p-7 border-b border-slate-100">
-                <h2 className="text-2xl font-bold text-slate-900">
+                <h2 id="contact-form-heading" className="text-2xl font-bold text-slate-900">
                   Send Us a Message
                 </h2>
                 <p className="text-slate-500 text-sm mt-1">
@@ -511,7 +508,7 @@ export function ContactContent() {
               </p>
               <div className="space-y-4">
                 <a
-                  href="https://wa.me/919363753540?text=Hi%20Infodra%20Team%2C%20I%20need%20a%20demo%20for%20Infodra%20SaaS.%20Please%20share%20details."
+                  href={WHATSAPP_HREF}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 p-4 rounded-2xl bg-green-50 hover:bg-green-100 border border-green-200 transition-colors group"

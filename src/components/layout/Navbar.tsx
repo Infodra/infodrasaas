@@ -6,8 +6,8 @@ import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { NAV_LINKS } from "@/lib/constants";
-import { Button } from "@/components/ui/Button";
+import { CONTACT_FORM_HREF, NAV_LINKS } from "@/lib/constants";
+import { Button, ButtonLink } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 
 export function Navbar() {
@@ -47,25 +47,17 @@ export function Navbar() {
         )}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 lg:h-18">
+          <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2.5 group shrink-0">
+            <Link href="/" aria-label="Infodra SaaS home" className="group shrink-0">
               <Image
-                src="/logo.png"
-                alt="Infodra SaaS Logo"
-                width={36}
-                height={36}
-                className="rounded-lg"
+                src="/infodra-brand-technologies.png"
+                alt="Infodra - Software as a Service"
+                width={200}
+                height={75}
+                className="h-auto w-40 sm:w-44"
                 priority
               />
-              <div className="flex flex-col leading-none">
-                <span className="text-white font-bold text-base tracking-tight">
-                  Infodra
-                </span>
-                <span className="text-blue-400 text-[10px] font-medium tracking-widest uppercase">
-                  SaaS
-                </span>
-              </div>
             </Link>
 
             {/* Desktop Nav */}
@@ -101,14 +93,16 @@ export function Navbar() {
               <Button variant="ghost" size="sm" className="text-slate-300 hover:text-white hover:bg-white/10">
                 Sign In
               </Button>
-              <Button variant="primary" size="sm">
+              <ButtonLink href={CONTACT_FORM_HREF} variant="primary" size="sm">
                 Request Demo
-              </Button>
+              </ButtonLink>
             </div>
 
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileOpen(!isMobileOpen)}
+              aria-label={isMobileOpen ? "Close navigation menu" : "Open navigation menu"}
+              aria-expanded={isMobileOpen}
               className="lg:hidden p-2 rounded-lg text-slate-300 hover:text-white hover:bg-white/10 transition-all"
             >
               {isMobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -125,7 +119,7 @@ export function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-x-0 top-16 z-40 bg-slate-950/95 backdrop-blur-xl border-b border-white/10 lg:hidden"
+            className="fixed inset-x-0 top-20 z-40 bg-slate-950/95 backdrop-blur-xl border-b border-white/10 lg:hidden"
           >
             <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1">
               {NAV_LINKS.map((link) =>
@@ -151,9 +145,9 @@ export function Navbar() {
                 <Button variant="outline" size="md" className="w-full justify-center">
                   Sign In
                 </Button>
-                <Button variant="primary" size="md" className="w-full justify-center">
+                <ButtonLink href={CONTACT_FORM_HREF} onClick={() => setIsMobileOpen(false)} variant="primary" size="md" className="w-full justify-center">
                   Request Demo
-                </Button>
+                </ButtonLink>
               </div>
             </div>
           </motion.div>

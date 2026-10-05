@@ -23,6 +23,10 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Infodra Technologies" }],
   creator: "Infodra Technologies",
+  icons: {
+    icon: { url: "/favicon.png", type: "image/png", sizes: "64x64" },
+    apple: { url: "/apple-touch-icon.png", type: "image/png", sizes: "180x180" },
+  },
   openGraph: {
     type: "website",
     locale: "en_US",

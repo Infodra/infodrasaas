@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import {
   Factory, Wrench, Building2, HeartPulse,
   GraduationCap, Truck, ShoppingBag, Briefcase,
@@ -35,16 +36,25 @@ function IndustryCard({ industry, index }: { industry: Industry; index: number }
       viewport={{ once: true }}
       transition={{ duration: 0.4, delay: index * 0.07 }}
       whileHover={{ y: -6, scale: 1.02 }}
-      className="group flex flex-col items-center gap-3 p-6 rounded-2xl border border-slate-200 bg-white hover:shadow-xl hover:shadow-slate-200/80 hover:border-slate-300 transition-all duration-300 cursor-default"
+      className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white hover:shadow-xl hover:shadow-slate-200/80 hover:border-slate-300 transition-all duration-300"
     >
-      <div
-        className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${GRADIENTS[index % GRADIENTS.length]} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}
-      >
-        <Icon className="w-7 h-7 text-white" />
+      <div className="relative h-44 overflow-hidden">
+        <Image
+          src={industry.image}
+          alt={industry.imageAlt}
+          fill
+          sizes="(min-width: 1024px) 400px, (min-width: 640px) 50vw, 100vw"
+          className="object-cover group-hover:scale-105 transition-transform duration-500"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/50 to-transparent" />
+        <div className={`absolute bottom-4 left-5 w-10 h-10 rounded-xl bg-gradient-to-br ${GRADIENTS[index % GRADIENTS.length]} flex items-center justify-center shadow-lg`}>
+          <Icon className="w-5 h-5 text-white" />
+        </div>
       </div>
-      <span className="text-slate-700 font-semibold text-sm text-center">
-        {industry.name}
-      </span>
+      <div className="p-5">
+        <h3 className="text-slate-900 font-bold text-lg">{industry.name}</h3>
+        <p className="mt-2 text-sm text-slate-600 leading-relaxed">{industry.description}</p>
+      </div>
     </motion.div>
   );
 }
@@ -56,11 +66,11 @@ export function IndustriesSection() {
         <SectionHeading
           eyebrow="Industries"
           title="Built for Your Industry"
-          description="Infodra SaaS is trusted across diverse industries — configurable workflows that adapt to your sector's unique requirements."
+          description="From property businesses to distributed field teams, discover SaaS tools that fit your industry's day-to-day workflows."
           className="mb-14"
         />
 
-        <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {INDUSTRIES.map((industry, index) => (
             <IndustryCard key={industry.name} industry={industry} index={index} />
           ))}

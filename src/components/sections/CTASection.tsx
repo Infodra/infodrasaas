@@ -2,7 +2,8 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, CalendarCheck, PhoneCall } from "lucide-react";
-import { Button } from "@/components/ui/Button";
+import { ButtonLink } from "@/components/ui/Button";
+import { CONTACT_FORM_HREF } from "@/lib/constants";
 
 export function CTASection() {
   return (
@@ -45,15 +46,15 @@ export function CTASection() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="primary" size="lg" className="group text-base">
+            <ButtonLink href={CONTACT_FORM_HREF} variant="primary" size="lg" className="group text-base">
               <CalendarCheck className="w-5 h-5" />
               Book a Demo
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button variant="outline" size="lg" className="text-base">
+            </ButtonLink>
+            <ButtonLink href={CONTACT_FORM_HREF} variant="outline" size="lg" className="text-base">
               <PhoneCall className="w-5 h-5" />
               Contact Sales
-            </Button>
+            </ButtonLink>
           </div>
 
           {/* Trust signals */}

@@ -1,17 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  MessageSquare, Mail, Globe, HardDrive, Cloud,
-  Briefcase, Hash, MessageCircle, Code2,
-} from "lucide-react";
-import { INTEGRATIONS } from "@/lib/constants";
+import Image from "next/image";
+import Link from "next/link";
+import { CONTACT_FORM_HREF, INTEGRATIONS } from "@/lib/constants";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-
-const ICON_MAP: Record<string, React.ComponentType<{ className?: string; style?: React.CSSProperties }>> = {
-  MessageSquare, Mail, Globe, HardDrive, Cloud,
-  Briefcase, Hash, MessageCircle, Code2,
-};
 
 export function IntegrationsSection() {
   return (
@@ -20,13 +13,12 @@ export function IntegrationsSection() {
         <SectionHeading
           eyebrow="Integrations"
           title="Connect Your Entire Ecosystem"
-          description="Infodra SaaS plugs seamlessly into the tools your team already uses — from Microsoft 365 to Google Workspace and beyond."
+          description="Build a connected workflow around the tools you already use. Availability and setup vary by SaaS product; our team can help you choose the right connections."
           className="mb-14"
         />
 
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-9 gap-4 justify-items-center">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {INTEGRATIONS.map((integration, index) => {
-            const Icon = ICON_MAP[integration.icon] || Cloud;
             return (
               <motion.div
                 key={integration.name}
@@ -34,21 +26,25 @@ export function IntegrationsSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.06 }}
-                whileHover={{ scale: 1.1, y: -4 }}
-                className="group flex flex-col items-center gap-2 p-4 rounded-2xl border border-slate-200 bg-white hover:shadow-lg hover:border-slate-300 transition-all duration-200 cursor-default w-24"
+                whileHover={{ y: -4 }}
+                className="group flex items-start gap-4 p-6 rounded-2xl border border-slate-200 bg-white hover:shadow-lg hover:border-slate-300 transition-all duration-200"
               >
                 <div
-                  className="w-10 h-10 rounded-xl flex items-center justify-center"
+                  className="w-16 h-16 shrink-0 rounded-2xl flex items-center justify-center"
                   style={{ backgroundColor: `${integration.color}15` }}
                 >
-                  <Icon
-                    className="w-5 h-5"
-                    style={{ color: integration.color }}
+                  <Image
+                    src={integration.image}
+                    alt={`${integration.name} logo`}
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 object-contain"
                   />
                 </div>
-                <span className="text-xs font-medium text-slate-600 text-center leading-tight">
-                  {integration.name}
-                </span>
+                <div>
+                  <h3 className="text-sm font-bold text-slate-900">{integration.name}</h3>
+                  <p className="text-sm text-slate-500 leading-relaxed mt-2">{integration.description}</p>
+                </div>
               </motion.div>
             );
           })}
@@ -64,9 +60,9 @@ export function IntegrationsSection() {
         >
           <p className="text-slate-700 font-medium">
             Don&apos;t see your tool?{" "}
-            <span className="text-blue-600 font-semibold">
-              We build custom integrations
-            </span>{" "}
+            <Link href={CONTACT_FORM_HREF} className="text-blue-600 font-semibold underline underline-offset-4">
+              Talk to us about custom integrations
+            </Link>{" "}
             — connect any REST API or enterprise system.
           </p>
         </motion.div>

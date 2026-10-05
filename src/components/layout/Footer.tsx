@@ -4,15 +4,15 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { Twitter, Linkedin, Github, Mail, ArrowRight } from "lucide-react";
+import { PRODUCTS } from "@/lib/constants";
 
 const footerLinks: Record<string, { label: string; href: string }[]> = {
-  Products: [
-    { label: "WorkHub", href: "#" },
-    { label: "StaffTrack", href: "#" },
-    { label: "BizLead", href: "#" },
-    { label: "AI Assistant", href: "#" },
-    { label: "CRM", href: "#" },
-  ],
+  Products: PRODUCTS.map((product) => ({
+    label: product.name,
+    href: product.status === "live" && product.href.startsWith("https://")
+      ? product.href
+      : `/#${product.id}`,
+  })),
   Solutions: [
     { label: "Manufacturing", href: "#" },
     { label: "Construction", href: "#" },
@@ -79,22 +79,18 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-6 gap-8 lg:gap-12">
           {/* Brand */}
           <div className="col-span-2">
-            <Link href="/" className="flex items-center gap-2.5 mb-4 w-fit">
+            <Link href="/" aria-label="Infodra SaaS home" className="block mb-4 w-fit">
               <Image
-                src="/logo.png"
-                alt="Infodra SaaS Logo"
-                width={36}
-                height={36}
-                className="rounded-lg"
+                src="/infodra-brand-technologies.png"
+                alt="Infodra - Software as a Service"
+                width={220}
+                height={83}
+                className="h-auto w-52"
               />
-              <div className="flex flex-col leading-none">
-                <span className="text-white font-bold text-base">Infodra</span>
-                <span className="text-blue-400 text-[10px] font-medium tracking-widest uppercase">SaaS</span>
-              </div>
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed mb-5 max-w-xs">
-              Enterprise SaaS products for workforce management, lead generation,
-              and AI automation. Built for modern businesses.
+              SaaS products for workforce management, lead generation, real estate,
+              accounting, customer relationships and AI automation. Built for modern businesses.
             </p>
             <div className="flex gap-3">
               {social.map(({ icon: Icon, label, href }) => (

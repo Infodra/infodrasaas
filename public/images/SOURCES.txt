@@ -1,0 +1,84 @@
+Marketing imagery
+=================
+The photographs below illustrate product use cases and industries. They are not
+screenshots of Infodra products. Downloaded from Unsplash on 2026-10-06 under the
+Unsplash license: https://unsplash.com/license
+
+Local filename              Source image URL
+saas/workhub.jpg            https://images.unsplash.com/photo-1521737711867-e3b97375f902
+saas/stafftrack.jpg         https://images.unsplash.com/photo-1504307651254-35680f356dfd
+saas/bizlead.jpg            https://images.unsplash.com/photo-1460925895917-afdab827c52f
+saas/ai-assistant.jpg       https://images.unsplash.com/photo-1485827404703-89b55fcc595e
+saas/crm.jpg                https://images.unsplash.com/photo-1553877522-43269d4ea984
+saas/list360.jpg            https://images.unsplash.com/photo-1600585154340-be6161a56a0c
+saas/manufacturing.jpg      https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7
+saas/engineering.jpg        https://images.unsplash.com/photo-1581092160562-40aa08e78837
+saas/healthcare.jpg         https://images.unsplash.com/photo-1576091160399-112ba8d25d1d
+saas/education.jpg          https://images.unsplash.com/photo-1503676260728-1c00da094a0b
+saas/logistics.jpg          https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d
+saas/retail.jpg             https://images.unsplash.com/photo-1441986300917-64674bd600d8
+saas/infodrabook.jpg        https://images.unsplash.com/photo-1450101499163-c8848c66ca85
+
+Integration artwork
+===================
+Downloaded from Iconify on 2026-10-06. Logos identify the respective services;
+all brand names and trademarks belong to their respective owners.
+Vector Logos collection: https://icon-sets.iconify.design/logos/ (CC0)
+VSCode Icons collection: https://icon-sets.iconify.design/vscode-icons/ (MIT)
+Simple Icons collection: https://icon-sets.iconify.design/simple-icons/ (CC0)
+Material Design Icons: https://icon-sets.iconify.design/mdi/ (Apache 2.0)
+
+integrations/teams.svg               https://api.iconify.design/logos/microsoft-teams.svg
+integrations/outlook.svg             https://api.iconify.design/vscode-icons/file-type-outlook.svg
+integrations/sharepoint.svg          https://api.iconify.design/simple-icons/microsoftsharepoint.svg?color=%23038387
+integrations/onedrive.svg            https://api.iconify.design/logos/microsoft-onedrive.svg
+integrations/azure.svg               https://api.iconify.design/logos/microsoft-azure.svg
+integrations/google-workspace.svg    https://api.iconify.design/logos/google-icon.svg
+integrations/slack.svg               https://api.iconify.design/logos/slack-icon.svg
+integrations/whatsapp.svg            https://api.iconify.design/logos/whatsapp-icon.svg
+integrations/rest-api.svg            https://api.iconify.design/mdi/api.svg?color=%236366f1
+
+The VSCode Icons MIT license is retained in integrations/LICENSE-vscode-icons.txt.
+The Material Design Icons Apache license is retained in integrations/LICENSE-mdi.txt.
+
+Branding
+========
+infodra-brand.png is a web-sized version of the user-supplied infodra-Saas.png.
+infodra-brand-white.png is a transparent web-sized version of the user-supplied
+Infodrasaas-white.png, previously used in the marketing header and footer.
+infodra-brand-technologies.png is a transparent web-sized version of the
+user-supplied Technologies (2).png, now used in the marketing header and footer.
+favicon.png and apple-touch-icon.png are resized versions of the user-supplied
+Infodra-Logo-wob.png. Supplied branding originals are retained in public.
+
+Product content
+===============
+LIST360 Business facts were checked at https://www.list360.in/business on
+2026-10-06. Listings, CRM and WhatsApp campaigns are available; SMS and email
+campaigns are marked coming soon on the source site.
+
+Infodra CRM remains coming soon. Its planned domain, specified by the site
+owner, is https://www.crm.infodrasaas.com. Its extended feature list describes
+the planned offering, not a currently deployed product.
+
+InfodraBook is a planned cloud accounting product, marked coming soon. Feature
+categories were referenced from https://www.zoho.com/in/books/ on 2026-10-06,
+including receivables, payables, inventory, projects, reporting, GST workflows,
+banking, multi-currency transactions, collaboration and automation. InfodraBook
+uses original marketing text and is not presented as affiliated with Zoho.
+Its feature list is a proposed scope, not a claim of implemented functionality
+or certified tax compliance. No launch domain was supplied.
+The products section presents InfodraBook as a full-width featured card with
+Billing & Payments, Accounting & Tax, and Reporting & Collaboration groups.
+These groups are the shared source for its complete feature list.
+Tailwind's content configuration includes src/lib so product gradient classes
+defined in the shared catalog are included in production CSS.
+
+Product names in the footer and contact dropdown come from src/lib/constants.ts.
+Demo, sales and early-access links use /contact#contact-form. The existing
+contact form submission is a frontend simulation; these changes do not add
+email delivery or a backend submission endpoint.
+
+The home and contact pages share a floating WhatsApp CTA using the existing
+Infodra contact number (+91 93637 53540). Its attention ring pulses slowly and
+respects the visitor's reduced-motion preference.

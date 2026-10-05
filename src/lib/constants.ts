@@ -1,5 +1,9 @@
 import type { Product, Testimonial, Feature, Stat, FAQ, Industry, NavLink } from "./types";
 
+export const CONTACT_FORM_HREF = "/contact#contact-form";
+export const WHATSAPP_HREF =
+  "https://wa.me/919363753540?text=Hi%20Infodra%20Team%2C%20I%20need%20a%20demo%20for%20Infodra%20SaaS.%20Please%20share%20details.";
+
 export const NAV_LINKS: NavLink[] = [
   { label: "Products", href: "#products" },
   { label: "Features", href: "#features" },
@@ -9,13 +13,42 @@ export const NAV_LINKS: NavLink[] = [
   { label: "Contact", href: "/contact" },
 ];
 
+export const INFODRABOOK_FEATURE_GROUPS = [
+  {
+    title: "Billing & Payments",
+    features: [
+      "Estimates, Invoices & Payment Reminders",
+      "Recurring Billing & Receivables",
+      "Project Time Tracking & Billing",
+      "Multi-Currency Transactions",
+    ],
+  },
+  {
+    title: "Accounting & Tax",
+    features: [
+      "Expense Tracking, Bills & Payables",
+      "Bank Transactions & Reconciliation",
+      "GST Accounting & E-Invoicing Workflows",
+      "Inventory, Sales & Purchase Orders",
+    ],
+  },
+  {
+    title: "Reporting & Collaboration",
+    features: [
+      "Profit & Loss, Balance Sheet & Cash Flow",
+      "Customer Portal & Accountant Access",
+      "Workflow Automation & Approvals",
+    ],
+  },
+];
+
 export const PRODUCTS: Product[] = [
   {
     id: "workhub",
     name: "WorkHub",
     tagline: "Complete Employee Management",
     description:
-      "Unified workforce management platform deeply integrated with Microsoft 365 ecosystem.",
+      "Bring employee attendance, leave and work tracking into one workspace. Connect Microsoft 365, Teams activity and SharePoint so HR and operations can keep everyday workforce workflows organised.",
     features: [
       "Employee Attendance",
       "Work Tracking",
@@ -29,13 +62,16 @@ export const PRODUCTS: Product[] = [
     gradient: "from-blue-600 to-indigo-600",
     status: "live",
     href: "#",
+    image: "/images/saas/workhub.jpg",
+    imageAlt: "A team collaborating around a table in a modern office",
+    audience: "For HR and operations teams",
   },
   {
     id: "stafftrack",
     name: "StaffTrack",
     tagline: "Field Force & Attendance",
     description:
-      "Real-time GPS field workforce tracking with attendance and timesheet management.",
+      "Give managers visibility into distributed field teams with GPS location tracking, attendance and timesheets. Employees can manage leave and everyday attendance through self-service workflows.",
     features: [
       "GPS Tracking",
       "Attendance",
@@ -48,13 +84,16 @@ export const PRODUCTS: Product[] = [
     gradient: "from-emerald-600 to-teal-600",
     status: "live",
     href: "#",
+    image: "/images/saas/stafftrack.jpg",
+    imageAlt: "Field workers collaborating on a construction site",
+    audience: "For field teams and site managers",
   },
   {
     id: "bizlead",
     name: "BizLead",
     tagline: "AI-Powered Lead Generation",
     description:
-      "Discover, verify, and export targeted business leads powered by AI intelligence.",
+      "Move from prospect research to outreach-ready contacts with AI-assisted company discovery, contact verification and exports. Use lead analytics to focus your sales team's next steps.",
     features: [
       "AI Lead Generation",
       "Company Database",
@@ -67,13 +106,16 @@ export const PRODUCTS: Product[] = [
     gradient: "from-violet-600 to-purple-600",
     status: "live",
     href: "#",
+    image: "/images/saas/bizlead.jpg",
+    imageAlt: "Business analytics and growth metrics on a laptop",
+    audience: "For sales and growth teams",
   },
   {
     id: "ai-assistant",
     name: "AI Assistant",
     tagline: "Enterprise AI Copilot",
     description:
-      "Intelligent enterprise assistant with document search, knowledge base, and workflow automation.",
+      "A planned enterprise copilot for searching documents, exploring your knowledge base and asking questions in chat. Designed to help teams find information and automate repeatable workflows.",
     features: [
       "Enterprise AI Assistant",
       "Document Search",
@@ -85,24 +127,68 @@ export const PRODUCTS: Product[] = [
     gradient: "from-orange-600 to-rose-600",
     status: "coming-soon",
     href: "#",
+    image: "/images/saas/ai-assistant.jpg",
+    imageAlt: "Robotics technology illustrating enterprise AI automation",
+    audience: "For knowledge-driven teams",
   },
   {
     id: "crm",
-    name: "CRM",
-    tagline: "Sales & Customer Success",
+    name: "Infodra CRM",
+    tagline: "Connected Leads, Sales & Campaigns",
     description:
-      "End-to-end CRM with pipeline management, invoicing, and customer relationship tools.",
+      "A planned sales workspace bringing LIST360-style lead capture, assignment, activity history and campaign workflows together with quotations, invoicing and customer management for growing businesses.",
     features: [
-      "Sales Pipeline",
-      "Customer Management",
-      "Quotations",
-      "Tasks",
-      "Invoices",
+      "Lead Capture & Team Assignment",
+      "Sales Pipeline & Contact Management",
+      "Activity Timeline & Follow-up Tasks",
+      "WhatsApp Campaign Workflows",
+      "Quotations & Invoices",
+      "Lead Source & Sales Analytics",
     ],
     icon: "BarChart3",
     gradient: "from-cyan-600 to-blue-600",
     status: "coming-soon",
-    href: "#",
+    href: "https://www.crm.infodrasaas.com",
+    image: "/images/saas/crm.jpg",
+    imageAlt: "Sales colleagues planning customer relationships and next steps",
+    audience: "For sales and customer success teams",
+  },
+  {
+    id: "list360",
+    name: "List360 Business",
+    tagline: "Real Estate, Connected",
+    description:
+      "A real estate SaaS platform for agents, brokers, builders and channel partners. Publish properties on LIST360, capture buyer and tenant enquiries in your CRM, and turn conversations into site visits.",
+    features: [
+      "Property Listings on list360.in",
+      "Lead Capture & Team Assignment",
+      "Deal Pipeline & Activity History",
+      "Official WhatsApp Business Campaigns",
+      "Approved Templates & Scheduled Sends",
+      "Delivery, Read & Lead Source Tracking",
+    ],
+    icon: "Building2",
+    gradient: "from-emerald-600 to-teal-600",
+    status: "live",
+    href: "https://www.list360.in/business",
+    image: "/images/saas/list360.jpg",
+    imageAlt: "A modern residential property with landscaped outdoor space",
+    audience: "For agents, brokers and developers",
+  },
+  {
+    id: "infodrabook",
+    name: "InfodraBook",
+    tagline: "Cloud Accounting & Business Finance",
+    description:
+      "A planned cloud accounting workspace for small businesses and finance teams. Bring invoicing, expenses, banking, inventory and financial reporting together to manage everyday finances and understand your cash flow.",
+    features: INFODRABOOK_FEATURE_GROUPS.flatMap((group) => group.features),
+    icon: "BookOpen",
+    gradient: "from-blue-600 to-indigo-600",
+    status: "coming-soon",
+    href: CONTACT_FORM_HREF,
+    image: "/images/saas/infodrabook.jpg",
+    imageAlt: "Business professionals reviewing financial paperwork at a desk",
+    audience: "For business owners, accountants and finance teams",
   },
 ];
 
@@ -168,26 +254,27 @@ export const TECH_STACK = [
 ];
 
 export const INTEGRATIONS = [
-  { name: "Microsoft Teams", icon: "MessageSquare", color: "#6264A7" },
-  { name: "Outlook", icon: "Mail", color: "#0078D4" },
-  { name: "SharePoint", icon: "Globe", color: "#0078D4" },
-  { name: "OneDrive", icon: "HardDrive", color: "#0078D4" },
-  { name: "Azure", icon: "Cloud", color: "#0078D4" },
-  { name: "Google Workspace", icon: "Briefcase", color: "#4285F4" },
-  { name: "Slack", icon: "Hash", color: "#4A154B" },
-  { name: "WhatsApp", icon: "MessageCircle", color: "#25D366" },
-  { name: "REST APIs", icon: "Code2", color: "#6366F1" },
+  { name: "Microsoft Teams", image: "/images/integrations/teams.svg", description: "Bring workforce updates into team collaboration.", color: "#6264A7" },
+  { name: "Outlook", image: "/images/integrations/outlook.svg", description: "Connect email and everyday communication.", color: "#0078D4" },
+  { name: "SharePoint", image: "/images/integrations/sharepoint.svg", description: "Keep business documents and knowledge connected.", color: "#0078D4" },
+  { name: "OneDrive", image: "/images/integrations/onedrive.svg", description: "Connect your team's cloud files and resources.", color: "#0078D4" },
+  { name: "Azure", image: "/images/integrations/azure.svg", description: "Extend your enterprise cloud ecosystem.", color: "#0078D4" },
+  { name: "Google Workspace", image: "/images/integrations/google-workspace.svg", description: "Connect the productivity tools your team uses.", color: "#4285F4" },
+  { name: "Slack", image: "/images/integrations/slack.svg", description: "Bring timely updates into your team channels.", color: "#4A154B" },
+  { name: "WhatsApp", image: "/images/integrations/whatsapp.svg", description: "Engage opted-in leads with approved campaigns.", color: "#25D366" },
+  { name: "REST APIs", image: "/images/integrations/rest-api.svg", description: "Build tailored connections to business systems.", color: "#6366F1" },
 ];
 
 export const INDUSTRIES: Industry[] = [
-  { name: "Manufacturing", icon: "Factory" },
-  { name: "Engineering", icon: "Wrench" },
-  { name: "Construction", icon: "Building2" },
-  { name: "Healthcare", icon: "HeartPulse" },
-  { name: "Education", icon: "GraduationCap" },
-  { name: "Logistics", icon: "Truck" },
-  { name: "Retail", icon: "ShoppingBag" },
-  { name: "Professional Services", icon: "Briefcase" },
+  { name: "Real Estate", icon: "Building2", image: "/images/saas/list360.jpg", imageAlt: "Modern residential real estate", description: "Connect property listings, buyer enquiries and campaigns with List360 Business." },
+  { name: "Manufacturing", icon: "Factory", image: "/images/saas/manufacturing.jpg", imageAlt: "Industrial production equipment on a factory floor", description: "Coordinate workforce attendance and operations across production sites." },
+  { name: "Engineering", icon: "Wrench", image: "/images/saas/engineering.jpg", imageAlt: "An engineer working with technical equipment", description: "Keep project teams, work tracking and shared knowledge in sync." },
+  { name: "Construction", icon: "Building2", image: "/images/saas/stafftrack.jpg", imageAlt: "Construction professionals working on site", description: "Manage field attendance and location visibility across active sites." },
+  { name: "Healthcare", icon: "HeartPulse", image: "/images/saas/healthcare.jpg", imageAlt: "Healthcare professionals reviewing information together", description: "Simplify staff coordination and day-to-day administrative workflows." },
+  { name: "Education", icon: "GraduationCap", image: "/images/saas/education.jpg", imageAlt: "Students learning in a classroom", description: "Bring staff management, collaboration and institutional knowledge together." },
+  { name: "Logistics", icon: "Truck", image: "/images/saas/logistics.jpg", imageAlt: "A warehouse with stocked storage aisles", description: "Track distributed teams and keep field operations moving." },
+  { name: "Retail", icon: "ShoppingBag", image: "/images/saas/retail.jpg", imageAlt: "A contemporary retail store interior", description: "Connect store teams, customer relationships and sales opportunities." },
+  { name: "Professional Services", icon: "Briefcase", image: "/images/saas/workhub.jpg", imageAlt: "Professional services colleagues collaborating", description: "Organise people, client pipelines and productivity in one SaaS portfolio." },
 ];
 
 export const STATS: Stat[] = [
@@ -236,7 +323,7 @@ export const FAQS: FAQ[] = [
   {
     question: "What is Infodra SaaS?",
     answer:
-      "Infodra SaaS is a suite of enterprise-grade cloud applications built for modern businesses — covering workforce management (WorkHub, StaffTrack), AI-powered lead generation (BizLead), CRM, and an AI Assistant. All products are built on a secure, scalable, cloud-native architecture with deep Microsoft 365 integration.",
+      "Infodra SaaS is a portfolio of cloud applications for workforce management (WorkHub and StaffTrack), AI-powered lead generation (BizLead), and real estate listings, CRM and WhatsApp campaigns (List360 Business). AI Assistant, Infodra CRM and InfodraBook, our planned cloud accounting product, are coming soon. Integrations and deployment options vary by product.",
   },
   {
     question: "Can I request custom development?",

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { WhatsAppCTA } from "@/components/layout/WhatsAppCTA";
 import { ContactHero } from "@/components/sections/contact/ContactHero";
 import { ContactContent } from "@/components/sections/contact/ContactContent";
 
@@ -25,6 +26,7 @@ export default function ContactPage() {
         <ContactContent />
       </main>
       <Footer />
+      <WhatsAppCTA />
     </>
   );
 }

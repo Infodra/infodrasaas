@@ -1,7 +1,7 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { WhatsAppCTA } from "@/components/layout/WhatsAppCTA";
 import { HeroSection } from "@/components/sections/HeroSection";
-import { TrustedBySection } from "@/components/sections/TrustedBySection";
 import { ProductsSection } from "@/components/sections/ProductsSection";
 import { FeaturesSection } from "@/components/sections/FeaturesSection";
 import { TechStackSection } from "@/components/sections/TechStackSection";
@@ -18,7 +18,6 @@ export default function HomePage() {
       <Navbar />
       <main>
         <HeroSection />
-        <TrustedBySection />
         <ProductsSection />
         <FeaturesSection />
         <TechStackSection />
@@ -30,6 +29,7 @@ export default function HomePage() {
         <CTASection />
       </main>
       <Footer />
+      <WhatsAppCTA />
     </>
   );
 }

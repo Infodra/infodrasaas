@@ -8,6 +8,9 @@ export interface Product {
   gradient: string;
   status: "live" | "coming-soon";
   href: string;
+  image: string;
+  imageAlt: string;
+  audience: string;
 }
 
 export interface Testimonial {
@@ -41,6 +44,9 @@ export interface FAQ {
 export interface Industry {
   name: string;
   icon: string;
+  image: string;
+  imageAlt: string;
+  description: string;
 }
 
 export interface NavLink {
