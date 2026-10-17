@@ -26,8 +26,8 @@ const benefits = [
   },
 ];
 const HERO_ORDER = [
-  "workhub", "stafftrack", "bizlead", "crm", "hr-payroll",
-  "ai-assistant", "cardly", "list360", "infodrabook",
+  "infodrabook", "stafftrack", "bizlead", "crm", "hr-payroll",
+  "ai-assistant", "cardly", "list360", "workhub",
 ];
 const heroProducts = HERO_ORDER.flatMap((id) => PRODUCTS.filter((product) => product.id === id));
 const WIDE_PRODUCTS = ["workhub", "list360", "infodrabook"];
