@@ -10,6 +10,8 @@ export interface Product {
   href: string;
   image: string;
   imageAlt: string;
+  imageFit?: "cover" | "contain";
+  imageBg?: string;
   audience: string;
 }
 

@@ -25,10 +25,12 @@ const benefits = [
     description: "Discuss Microsoft 365 connections and custom integrations that fit your chosen product and workflows.",
   },
 ];
-const heroProducts = [
-  ...PRODUCTS.filter((product) => product.status === "live"),
-  ...PRODUCTS.filter((product) => product.status === "coming-soon"),
+const HERO_ORDER = [
+  "workhub", "stafftrack", "bizlead", "crm", "hr-payroll",
+  "ai-assistant", "cardly", "list360", "infodrabook",
 ];
+const heroProducts = HERO_ORDER.flatMap((id) => PRODUCTS.filter((product) => product.id === id));
+const WIDE_PRODUCTS = ["workhub", "list360", "infodrabook"];
 
 export function HeroSection() {
   return (
@@ -126,14 +128,14 @@ export function HeroSection() {
               {heroProducts.map((product, index) => (
                 <Link
                   key={product.id}
-                  href={`#${product.id}`}
-                  className={`group relative overflow-hidden rounded-2xl bg-slate-800 ${product.id === "workhub" || product.id === "list360" || product.id === "infodrabook" ? "col-span-2 h-44 sm:h-48" : "h-32 sm:h-36"} focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400`}
+                  href={`/products#${product.id}`}
+                  className={`group relative overflow-hidden rounded-2xl bg-slate-800 ${WIDE_PRODUCTS.includes(product.id) ? "col-span-2 h-44 sm:h-48" : "h-32 sm:h-36"} focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400`}
                 >
                   <Image
                     src={product.image}
                     alt={product.imageAlt}
                     fill
-                    sizes={product.id === "workhub" || product.id === "list360" || product.id === "infodrabook" ? "(min-width: 1024px) 550px, (min-width: 640px) 700px, 95vw" : "(min-width: 1024px) 260px, 45vw"}
+                    sizes={WIDE_PRODUCTS.includes(product.id) ? "(min-width: 1024px) 550px, (min-width: 640px) 700px, 95vw" : "(min-width: 1024px) 260px, 45vw"}
                     priority={index < 3}
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />

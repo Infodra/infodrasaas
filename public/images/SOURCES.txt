@@ -18,6 +18,14 @@ saas/education.jpg          https://images.unsplash.com/photo-1503676260728-1c00
 saas/logistics.jpg          https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d
 saas/retail.jpg             https://images.unsplash.com/photo-1441986300917-64674bd600d8
 saas/infodrabook.jpg        https://images.unsplash.com/photo-1450101499163-c8848c66ca85
+
+HR & Payroll (saas/hr-payroll.jpg,
+https://images.unsplash.com/photo-1725258080098-727051947997) was downloaded
+from Unsplash on 2026-10-17 under the same license. HR & Payroll is marked
+coming soon.
+
+The bizlead.png, crm.png, infodrabook.png, cardly.png and stafftrack.png
+product visuals in saas/ were supplied by the site owner.
 
 Integration artwork
 ===================

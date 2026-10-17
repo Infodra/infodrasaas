@@ -7,7 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { CONTACT_FORM_HREF, NAV_LINKS } from "@/lib/constants";
-import { Button, ButtonLink } from "@/components/ui/Button";
+import { ButtonLink } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 
 export function Navbar() {
@@ -90,9 +90,6 @@ export function Navbar() {
 
             {/* CTA Buttons */}
             <div className="hidden lg:flex items-center gap-3">
-              <Button variant="ghost" size="sm" className="text-slate-300 hover:text-white hover:bg-white/10">
-                Sign In
-              </Button>
               <ButtonLink href={CONTACT_FORM_HREF} variant="primary" size="sm">
                 Request Demo
               </ButtonLink>
@@ -142,9 +139,6 @@ export function Navbar() {
                 </button>
               ))}
               <div className="flex flex-col gap-2 mt-4 pt-4 border-t border-white/10">
-                <Button variant="outline" size="md" className="w-full justify-center">
-                  Sign In
-                </Button>
                 <ButtonLink href={CONTACT_FORM_HREF} onClick={() => setIsMobileOpen(false)} variant="primary" size="md" className="w-full justify-center">
                   Request Demo
                 </ButtonLink>

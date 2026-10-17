@@ -81,7 +81,7 @@ const CONTACT_FAQS = [
   {
     question: "Which products are best for my business?",
     answer:
-      "WorkHub and StaffTrack support employee and field-team management. BizLead supports sales prospecting. List360 Business brings real estate listings, lead management and WhatsApp campaigns together. AI Assistant, Infodra CRM and InfodraBook are coming soon; InfodraBook is planned for cloud accounting, invoicing and business finance. Use the form to discuss the right product for your team.",
+      "WorkHub and StaffTrack support employee and field-team management. BizLead supports sales prospecting. List360 Business brings real estate listings, lead management and WhatsApp campaigns together. Infodra CRM supports sales and customer management, InfodraBook covers cloud accounting, invoicing and business finance, and Cardly offers AI business card management. AI Assistant is coming soon. Use the form to discuss the right product for your team.",
   },
   {
     question: "Do you offer trial periods or demos?",

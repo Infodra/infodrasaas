@@ -3,15 +3,15 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { Twitter, Linkedin, Github, Mail, ArrowRight } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Mail, ArrowRight } from "lucide-react";
 import { PRODUCTS } from "@/lib/constants";
 
 const footerLinks: Record<string, { label: string; href: string }[]> = {
   Products: PRODUCTS.map((product) => ({
     label: product.name,
-    href: product.status === "live" && product.href.startsWith("https://")
+    href: product.href.startsWith("https://")
       ? product.href
-      : `/#${product.id}`,
+      : `/products#${product.id}`,
   })),
   Solutions: [
     { label: "Manufacturing", href: "#" },
@@ -34,9 +34,9 @@ const footerLinks: Record<string, { label: string; href: string }[]> = {
 };
 
 const social = [
-  { icon: Twitter, label: "Twitter", href: "#" },
-  { icon: Linkedin, label: "LinkedIn", href: "#" },
-  { icon: Github, label: "GitHub", href: "#" },
+  { icon: Facebook, label: "Facebook", href: "https://www.facebook.com/profile.php?id=61595148331419" },
+  { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/infodrasaas/" },
+  { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/company/144016164/" },
   { icon: Mail, label: "Email", href: "mailto:hello@infodra.com" },
 ];
 
@@ -97,6 +97,8 @@ export function Footer() {
                 <a
                   key={label}
                   href={href}
+                  target={href.startsWith("https://") ? "_blank" : undefined}
+                  rel={href.startsWith("https://") ? "noopener noreferrer" : undefined}
                   aria-label={label}
                   className="w-8 h-8 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center text-slate-400 hover:text-white transition-all"
                 >
